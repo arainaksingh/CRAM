@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cram"
+version = "0.1.0"
+description = "Context Resolution in AI Memory"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "google-genai>=2.33.0",
+    "pydantic>=2.12.0",
+    "python-dotenv>=1.0.0",
+    "streamlit>=1.30.0",
+    "pytest>=8.0.0",
+    "tenacity>=8.2.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cram*"]
+
+[tool.pyright]
+extraPaths = ["."]
+pythonVersion = "3.11"
